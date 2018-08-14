@@ -1,0 +1,98 @@
+.form-login {
+  position: fixed;
+  width: 400px;
+  height: 300px;
+  left: 50%;
+  top: 50%;
+  background-color: rgba(255, 255, 255, 0.98);
+  margin-top: -119px;
+  margin-left: -200px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.4);
+  .item-pas {
+    width: 350px;
+    font-size: 16px;
+    color: #a8aab2;
+    font-weight: 400;
+    line-height: 28px;
+    float: left;
+    margin: 0;
+  }
+  .bottom {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    .step {
+      flex: 3;
+      -webkit-flex: 3;
+      -ms-flex: 3;
+      width: 100%;
+      height: 54px;
+      background-color: #373942;
+      border-bottom-left-radius: 6px;
+      display: flex;
+      span {
+        flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        line-height: 54px;
+        color: #fff;
+        margin-left: 25px;
+        font-size: 18px;
+      }
+      ul {
+        flex: 2;
+        -webkit-flex: 2;
+        -ms-flex: 2;
+        list-style: none;
+        height: 10px;
+        margin: 23px 0;
+        padding-left: 15px;
+        li {
+          position: relative;
+          height: 7px;
+          width: 7px;
+          margin: 0 10px;
+          float: left;
+          border-radius: 50%;
+          background: none;
+          border: 1px solid #535560;
+          &:first-child:before {
+            width: 0;
+          }
+          &:before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            border-top: 1px solid #535560;
+            left: -21px;
+            top: 3px;
+          }
+          &.true {
+            background-color: #7a7d86;
+          }
+          &.active {
+            background-color: #fff;
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.78);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.slider-container {
+  width: 350px;
+  margin: 0 25px;
+  overflow: hidden;
+}
+
+.slider-turn {
+  width: 10000px;
+}

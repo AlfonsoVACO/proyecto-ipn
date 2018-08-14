@@ -1,0 +1,21 @@
+@mixin transform($property) {
+	-webkit-transform: $property;
+    -moz-transform: $property;
+    -ms-transform: $property;
+    -o-transform: $property;
+    transform: $property;
+}
+@mixin transformtwo($property, $propertytwo) {
+	-webkit-transform: $property;
+    -moz-transform: $property;
+    -ms-transform: $property;
+    -o-transform: $property;
+    transform: $propertytwo;
+}
+@mixin transition($cant, $time, $type) {
+	-webkit-transition: $cant $time $type;
+	-moz-transition: $cant $time $type;
+	-ms-transition: $cant $time $type;
+	-o-transition: $cant $time $type;
+	transition: $cant $time $type;
+}

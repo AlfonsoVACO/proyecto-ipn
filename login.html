@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Iniciar sesión</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap4/bootstrap.min.css">
+		<link href="assets/css/fontawesome/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="assets/scss/main-client.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/errores.css">
+	</head>
+	<body>
+		<div class="container-pz">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-login">
+            <div class="slider-container">
+              <div class="slider-turn">
+                <div class="item-pas form-group">
+                  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+                  <div id="status"></div>
+                </div>
+                <div class="item-pas">
+									<form class="form">
+	                  <label for="correo"></label>
+	                  <input type="text" class="form-control" id="correo" placeholder="">
+									</form>
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="step">
+                <span></span>
+                <ul>
+                  <li data-num="1"></li>
+                  <li data-num="2"></li>
+                </ul>
+              </div>
+              <input type="button" class="btn btn-info" value="Registrarte">
+            </div>
+          </div>
+        </div>
+      </div>
+		</div>
+		<script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+		<script src="assets/css/bootstrap4/popper.js"></script>
+		<script src="assets/css/bootstrap4/bootstrap.min.js"></script>
+		<script src="assets/scrollmagic/ScrollMagic.min.js"></script>
+		<script src="assets/js/funtions.js"></script>
+    <script type="text/javascript">
+			$.backstretch([
+	      "http://4.bp.blogspot.com/-SkCaQXul0TY/VKnedLcZosI/AAAAAAAAAK8/qy8GL9kxLII/w1200-h630-p-k-no-nu/orgullo%2Bpolit%C3%A9cnico.jpg"
+	    , "https://img00.deviantart.net/eda1/i/2015/110/b/6/wallpaper_ipn_blood_by_iloveipn-d6j1kbh.jpg"
+	    , "http://ro-kam.com/wp-content/uploads/2017/05/vlcsnap-2017-05-09-09h15m22s202.jpg"
+	  ], {duration: 3000, fade: 750});
+      $(document).ready(function () {
+        var nbP = $('.form-login .item-pas').length;
+        var w = parseInt($('.form-login .item-pas').css("width"));
+        var max = (nbP - 1) * w;
+        $("ul li[data-num='1']").addClass('active');
+        $('.step span').html('Opción 1');
+
+        $('.btn').on('click', function(){
+          var margL = parseInt($('.slider-turn').css('margin-left'));
+          var modulo = margL%w;
+          if (-margL < max && modulo == 0) {
+            margL -= w;
+            $('.slider-turn').animate({
+              'margin-left':margL
+            },300);
+            $('ul li.active').addClass('true').removeClass('active');
+            var x = -margL/w +1;
+            $('ul li[data-num="'+x+'"]').addClass('active');
+            $('.step span').html("Opción "+x);
+          }
+        });
+
+        function statusChangeCallback(response) {
+			    console.log('statusChangeCallback');
+			    console.log(response);
+			    if (response.status === 'connected') {
+			      testAPI();
+			    } else {
+			      document.getElementById('status').innerHTML = 'Please log ' +
+			        'into this app.';
+			    }
+			  }
+			  function checkLoginState() {
+			    FB.getLoginStatus(function(response) {
+			      statusChangeCallback(response);
+			    });
+			  }
+
+			  window.fbAsyncInit = function() {
+			    FB.init({
+			      appId      : '2099671733382944',
+			      cookie     : true,
+			      xfbml      : true,
+			      version    : 'v2.8'
+			    });
+
+			    FB.getLoginStatus(function(response) {
+			      statusChangeCallback(response);
+			    });
+
+			  };
+			  (function(d, s, id) {
+			    var js, fjs = d.getElementsByTagName(s)[0];
+			    if (d.getElementById(id)) return;
+			    js = d.createElement(s); js.id = id;
+			    js.src = "https://connect.facebook.net/en_US/sdk.js";
+			    fjs.parentNode.insertBefore(js, fjs);
+			  }(document, 'script', 'facebook-jssdk'));
+
+			  function testAPI() {
+			    console.log('Welcome!  Fetching your information.... ');
+			    FB.api('/me', function(response) {
+			      console.log('Successful login for: ' + response.name);
+			      document.getElementById('status').innerHTML =
+			        'Thanks for logging in, ' + response.name + '!';
+			    });
+			  }
+      });
+    </script>
+	</body>
+</html>
