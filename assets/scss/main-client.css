@@ -687,6 +687,29 @@ section {
 .slider-turn {
   width: 10000px; }
 
+.container-alumno {
+  padding: 10px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.menu-alumno {
+  padding: 20px;
+  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
+
+.menu-alumno ul li {
+  padding-bottom: 5px; }
+
+.menu-alumno ul .active {
+  font-weight: bold;
+  border-bottom: 2px solid #eee;
+  background-color: rgba(170, 221, 221, 0.5);
+  border-radius: 3px;
+  padding-left: 3px;
+  padding: 2px; }
+
 .section {
   padding-top: 30px;
   padding-bottom: 30px; }
@@ -1455,16 +1478,6 @@ section {
   background-repeat: no-repeat; }
   .form-control-text:required {
     box-shadow: none; }
-  .form-control-text.error {
-    -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-    -moz-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-    -o-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-    transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #f44336 4%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #f44336 4%);
-    background-position: 0 0;
-    background-size: 400px 100%;
-    background-repeat: no-repeat; }
   .form-control-text:focus {
     background-position: 0 0;
     color: #444;

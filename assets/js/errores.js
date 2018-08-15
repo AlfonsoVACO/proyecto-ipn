@@ -107,32 +107,38 @@ var Validacion = /** @class */ (function() {
 			case "INPUT": {
 				switch (jQuery("#" + datoItem).attr("type")) {
 				case "email": {
-					values[i] = operations.getIEmail(datoItem, type,
+					values[_i] = operations.getIEmail(datoItem, type,
 							mailmesage.confemail);
 				}
 					break;
 				case "text": {
-					values[i] = operations.getValueText(datoItem, type);
+					values[_i] = operations.getValueText(datoItem, type);
 				}
+				break;
+				case "tel": {
+					values[_i] = operations.getValueText(datoItem, type);
+				}
+				break;
 				case "date": {
-					values[i] = operations.getExpresion(jQuery("#" + datoItem).val(), "f");
+					values[_i] = operations.getExpresion(jQuery("#" + datoItem).val(), "f");
 				}
 					break;
 				}
 			}
 				break;
 			case "TEXTAREA": {
-				values[i] = operations.getValueText(datoItem, type);
+				values[_i] = operations.getValueText(datoItem, type);
 			}
 				break;
 			case "SELECT": {
-				values[i] = operations.getValueSelect(datoItem, type);
+				values[_i] = operations.getValueSelect(datoItem, type);
 			}
 				break;
 			default:
 				break;
 			}
 		}
+
 		var desition = values.filter(function(item) {
 			return item == false;
 		});

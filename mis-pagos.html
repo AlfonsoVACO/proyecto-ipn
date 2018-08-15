@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Contacto</title>
+		<title>Mis pagos</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +26,7 @@
 					<nav class="nav-container">
 						<div class="nav">
 							<ul class="nav-list">
-								<li class="nav-item"><a href="cursos.html">Cursos</a></li>
+                <li class="nav-item"><a href="cursos.html">Cursos</a></li>
 								<li class="nav-item"><a href="nosotros.html">Nosotros</a></li>
 								<li class="nav-item"><a href="contacto.html">Contacto</a></li>
 								<li class="nav-item sesion" scope="public_profile,email"><a href="#"></a></li>
@@ -34,6 +34,7 @@
 						</div>
 					</nav>
 				</div>
+
 				<div class="toggle">
 					<i class="fas fa-bars trans_200"></i>
 				</div>
@@ -58,28 +59,91 @@
 			</div>
 
       <div class="section">
-        <div class="container">
-          <hr>
+        <div class="container-alumno" style="height: -webkit-fill-available;">
           <div class="row">
-            <div class="col-md-4">
-              <div class="footer">
-                <h3 class="footer-title">Nosotros</h3>
-                <p>Wilfrido Massieu 310 y 684, <br>Col. Planetario Lindavista. CDMX, México.<br>Lunes a Domingo de 9 am a 8 pm</p>
-                <ul class="footer-links">
-                  <li><a href="#"><i class="fa fa-phone"></i>(55) 8436 9486</a></li>
-                  <li><a href="#"><i class="fa fa-phone"></i>(55) 7822 0963</a></li>
+            <div class="col-md-3">
+              <div class="menu-alumno">
+                <ul>
+                  <li><a href="perfil.html">Mi perfil</a></li>
+                  <li><a href="mis-cursos.html">Mis cursos</a></li>
+                  <li class="active"><a href="mis-pagos.html">Mis pagos</a></li>
+                  <li><a onclick="logout('./');">Salir</a></li>
                 </ul>
               </div>
             </div>
-            <div class="col-md-8">
-              <div style="width: 100%">
-                <iframe width="100%" height="400" src="https://maps.google.com/maps?width=100%&height=400&hl=es&coord=19.496737,-99.1425129&q=Wilfrido%20Massieu%20310%20Col.%20Planetario%20Lindavista.+(IPN)&ie=UTF8&t=&z=17&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/crear-un-mapa-de-google/">Crear mapa interactivo</a> by <a href="https://www.mapsdirections.info/">Mapa España</a></iframe>
+            <div class="col-md-9">
+              <div class="menu-alumno">
+                <div class="row">
+                  <div class="col-md-12">
+                    <table class="table">
+                    	<thead>
+                    		<tr>
+                    			<td>Curso</td>
+													<td>Precio</td>
+													<td>Fecha</td>
+													<td>Ficha</td>
+                    		</tr>
+                    	</thead>
+											<tbody>
+												<tr>
+													<td>{{ Nombre curso }}</td>
+													<td>{{ Precio }}</td>
+													<td>{{ Fecha }}</td>
+													<td><a href="#">Descargar</a></td>
+												</tr>
+                        <tr>
+													<td>{{ Nombre curso }}</td>
+													<td>{{ Precio }}</td>
+													<td>{{ Fecha }}</td>
+													<td><a href="#">Descargar</a></td>
+												</tr>
+                        <tr>
+													<td>{{ Nombre curso }}</td>
+													<td>{{ Precio }}</td>
+													<td>{{ Fecha }}</td>
+													<td><a href="#">Descargar</a></td>
+												</tr>
+                        <tr>
+													<td>{{ Nombre curso }}</td>
+													<td>{{ Precio }}</td>
+													<td>{{ Fecha }}</td>
+													<td><a href="#">Descargar</a></td>
+												</tr>
+                        <tr>
+													<td>{{ Nombre curso }}</td>
+													<td>{{ Precio }}</td>
+													<td>{{ Fecha }}</td>
+													<td><a href="#">Descargar</a></td>
+												</tr>
+                        <tr>
+													<td>{{ Nombre curso }}</td>
+													<td>{{ Precio }}</td>
+													<td>{{ Fecha }}</td>
+													<td><a href="#">Descargar</a></td>
+												</tr>
+                        <tr>
+													<td>{{ Nombre curso }}</td>
+													<td>{{ Precio }}</td>
+													<td>{{ Fecha }}</td>
+													<td><a href="#">Descargar</a></td>
+												</tr>
+                        <tr>
+													<td>{{ Nombre curso }}</td>
+													<td>{{ Precio }}</td>
+													<td>{{ Fecha }}</td>
+													<td><a href="#">Descargar</a></td>
+												</tr>
+											</tbody>
+                    </table>
+        					</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <footer id="footer">
+
+      <footer id="footer" style="    display: contents;position: fixed;left: 0px;bottom: 0px;width: 100%;">
 				<div id="bottom-footer" class="section">
 					<div class="container">
 						<div class="row">
@@ -102,27 +166,8 @@
 		<script src="assets/css/bootstrap4/popper.js"></script>
 		<script src="assets/css/bootstrap4/bootstrap.min.js"></script>
 		<script src="assets/scrollmagic/ScrollMagic.min.js"></script>
-		<script type="text/javascript" src="//connect.facebook.net/en_US/all.js#xfbml=1&appId=2099671733382944" id="facebook-jssdk"></script>
+    <script type="text/javascript" src="//connect.facebook.net/en_US/all.js#xfbml=1&appId=2099671733382944" id="facebook-jssdk"></script>
 		<script src="assets/js/funtions.js"></script>
 		<script type="text/javascript" src="assets/js/errores.js"></script>
-    <script type="text/javascript">
-      $("#btnpagar").click(function(){
-        var result = errors({
-          valid : ["strNoTarjeta","strNombreTarj","stdate"],
-          normalstyle: { "border-bottom": "solid 1px #ddd"},
-          errors : true,
-          errorstyle : { "border-bottom": "solid 1px red" },
-          otherconf : { "confemail": false }
-        });
-        clear(["strNoTarjeta","strNombreTarj"]);
-        console.log( result );
-      });
-      $("#item").click(function(){
-        $("#release").css({
-          "background-color": "rbga(0,0,0,0.6)",
-          "background-color": "rbga(255,255,255,0.95)"
-        });
-      });
-    </script>
 	</body>
 </html>

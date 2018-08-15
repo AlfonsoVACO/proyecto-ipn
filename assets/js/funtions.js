@@ -15,6 +15,7 @@ $(document).ready(function(){
 	getSlide();
 	initSvg();
 	getToggle();
+	checkLoginState();
 
 	/**************************/
 	/*		Predefinido  	  */
@@ -217,4 +218,62 @@ $(document).ready(function(){
 		intervalId = setInterval(scrollStep, 16.66);
 	}
 	$scrollButton.addEventListener('click', scrollToTop);
+	/** sesion facebook **/
+	function statusChangeCallback(response) {
+		if (response.status === 'connected') {
+			testAPI();
+		} else {
+			$(".sesion a").text("Iniciar sesión");
+			$(".sesion a").attr("href","login.html");
+			if( $(".menu-alumno").val() != undefined){
+				window.location.href = './';
+			}
+		}
+	}
+
+	function checkLoginState() {
+		FB.getLoginStatus(function(response) {
+			statusChangeCallback(response);
+		});
+	}
+
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId: '2099671733382944',
+			cookie: true,
+			xfbml: true,
+			version: 'v2.8'
+		});
+
+		FB.getLoginStatus(function(response) {
+			statusChangeCallback(response);
+		});
+
+	};
+	(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "https://connect.facebook.net/en_US/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+
+	function testAPI() {
+		FB.api('/me', function(response) {
+			$(".sesion a").html(response.name);
+			$(".sesion a").attr("href","perfil.html");
+		});
+	}
+
 });
+
+// existir aun despues y antes de iniciar la pagina
+function logout(redirectUrl) {
+	FB.getLoginStatus(function (response) {
+		if (response.status == 'connected'){
+			FB.logout(function (response) {
+				location.href = redirectUrl;
+			});
+		}
+	});
+}

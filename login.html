@@ -49,13 +49,13 @@
 		<script src="assets/css/bootstrap4/popper.js"></script>
 		<script src="assets/css/bootstrap4/bootstrap.min.js"></script>
 		<script src="assets/scrollmagic/ScrollMagic.min.js"></script>
-		<script src="assets/js/funtions.js"></script>
     <script type="text/javascript">
 			$.backstretch([
-	      "http://4.bp.blogspot.com/-SkCaQXul0TY/VKnedLcZosI/AAAAAAAAAK8/qy8GL9kxLII/w1200-h630-p-k-no-nu/orgullo%2Bpolit%C3%A9cnico.jpg"
-	    , "https://img00.deviantart.net/eda1/i/2015/110/b/6/wallpaper_ipn_blood_by_iloveipn-d6j1kbh.jpg"
-	    , "http://ro-kam.com/wp-content/uploads/2017/05/vlcsnap-2017-05-09-09h15m22s202.jpg"
-	  ], {duration: 3000, fade: 750});
+				"http://4.bp.blogspot.com/-SkCaQXul0TY/VKnedLcZosI/AAAAAAAAAK8/qy8GL9kxLII/w1200-h630-p-k-no-nu/orgullo%2Bpolit%C3%A9cnico.jpg",
+				"https://img00.deviantart.net/eda1/i/2015/110/b/6/wallpaper_ipn_blood_by_iloveipn-d6j1kbh.jpg",
+				"http://ro-kam.com/wp-content/uploads/2017/05/vlcsnap-2017-05-09-09h15m22s202.jpg"
+			], {duration: 3000, fade: 750});
+
       $(document).ready(function () {
         var nbP = $('.form-login .item-pas').length;
         var w = parseInt($('.form-login .item-pas').css("width"));
@@ -77,53 +77,49 @@
             $('.step span').html("Opción "+x);
           }
         });
-
-        function statusChangeCallback(response) {
-			    console.log('statusChangeCallback');
-			    console.log(response);
-			    if (response.status === 'connected') {
-			      testAPI();
-			    } else {
-			      document.getElementById('status').innerHTML = 'Please log ' +
-			        'into this app.';
-			    }
-			  }
-			  function checkLoginState() {
-			    FB.getLoginStatus(function(response) {
-			      statusChangeCallback(response);
-			    });
-			  }
-
-			  window.fbAsyncInit = function() {
-			    FB.init({
-			      appId      : '2099671733382944',
-			      cookie     : true,
-			      xfbml      : true,
-			      version    : 'v2.8'
-			    });
-
-			    FB.getLoginStatus(function(response) {
-			      statusChangeCallback(response);
-			    });
-
-			  };
-			  (function(d, s, id) {
-			    var js, fjs = d.getElementsByTagName(s)[0];
-			    if (d.getElementById(id)) return;
-			    js = d.createElement(s); js.id = id;
-			    js.src = "https://connect.facebook.net/en_US/sdk.js";
-			    fjs.parentNode.insertBefore(js, fjs);
-			  }(document, 'script', 'facebook-jssdk'));
-
-			  function testAPI() {
-			    console.log('Welcome!  Fetching your information.... ');
-			    FB.api('/me', function(response) {
-			      console.log('Successful login for: ' + response.name);
-			      document.getElementById('status').innerHTML =
-			        'Thanks for logging in, ' + response.name + '!';
-			    });
-			  }
       });
+
+			function statusChangeCallback(response) {
+				console.log('statusChangeCallback');
+				console.log(response);
+				if (response.status === 'connected') {
+					testAPI();
+				} else {
+					document.getElementById('status').innerHTML = 'Favor de iniciar sesión';
+				}
+			}
+			function checkLoginState() {
+				FB.getLoginStatus(function(response) {
+					statusChangeCallback(response);
+				});
+			}
+
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId      : '2099671733382944',
+					cookie     : true,
+					xfbml      : true,
+					version    : 'v2.8'
+				});
+
+				FB.getLoginStatus(function(response) {
+					statusChangeCallback(response);
+				});
+
+			};
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "https://connect.facebook.net/en_US/sdk.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+
+			function testAPI() {
+				FB.api('/me', function(response) {
+					window.location.href='./';
+				});
+			}
     </script>
 	</body>
 </html>

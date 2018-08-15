@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Mi perfil</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap4/bootstrap.min.css">
+		<link href="assets/css/fontawesome/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="assets/scss/main-client.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/errores.css">
+	</head>
+	<body>
+		<div class="container-pz">
+
+      <header class="header d-flex flex-row">
+				<div class="header-content d-flex flex-row align-items-center">
+					<div class="logo-container">
+						<div class="logo">
+              <a href="./">
+								<img src="https://preparacionipn.com/admin/images/logo_.png" style="height: 50%; width: 50%" alt="">
+							</a>
+						</div>
+					</div>
+					<nav class="nav-container">
+						<div class="nav">
+							<ul class="nav-list">
+                <li class="nav-item"><a href="cursos.html">Cursos</a></li>
+								<li class="nav-item"><a href="nosotros.html">Nosotros</a></li>
+								<li class="nav-item"><a href="contacto.html">Contacto</a></li>
+								<li class="nav-item sesion" scope="public_profile,email"><a href="#"></a></li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+
+				<div class="toggle">
+					<i class="fas fa-bars trans_200"></i>
+				</div>
+			</header>
+			<div class="menu-container minim">
+				<div class="close-container">
+					<div class="menu-close"></div>
+				</div>
+				<div class="inner minim">
+					<div class="menu minim">
+						<ul class="list minim">
+							<li class="item minim"><a href="./">Inicio</a></li>
+							<li class="item minim"><a href="cursos.html">Cursos</a></li>
+							<li class="item minim"><a href="nosotros.html">Nosotros</a></li>
+							<li class="item minim"><a href="contacto.html">Contacto</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="border-back">
+				<img src="http://www.educacionpersonal.com/edupersonal/theme/image.php/campus/theme/1528969453/background" class="img-wall"/>
+			</div>
+
+      <div class="section">
+        <div class="container-alumno">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="menu-alumno">
+                <ul>
+                  <li class="active"><a href="perfil.html">Mi perfil</a></li>
+                  <li><a href="mis-cursos.html">Mis cursos</a></li>
+									<li><a href="mis-pagos.html">Mis pagos</a></li>
+                  <li><a onclick="logout('./');">Salir</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="menu-alumno">
+                <div class="row">
+                  <div class="col-md-12">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Nombre</label>
+                                    <input type="text" class="form-control-text" id="strnombre" name="strnombre">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Apellido materno</label>
+                                    <input type="text" class="form-control-text" id="strapellidom" name="strapellidom">
+                                </div>
+                            </div>
+														<div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Apellido paterno</label>
+                                    <input type="text" class="form-control-text" id="strapellidop" name="strapellidop">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Dirección</label>
+                                    <input type="text" class="form-control-text" id="strdireccion" name="strdireccion">
+                                </div>
+                            </div>
+														<div class="col-md-2">
+                                <div class="form-group label-floating">
+                                    <label class="control-label">CP</label>
+                                    <input type="text" class="form-control-text data-numeric" maxlength="5" id="strcp" name="strcp">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Correo</label>
+                                    <input type="email" class="form-control-text" id="strcorreo" name="strcorreo">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Teléfono</label>
+                                    <input type="tel" class="form-control-text data-numeric" maxlength="10" id="strtelefono" name="strtelefono">
+                                </div>
+                            </div>
+                        </div>
+												<div class="row">
+													<div class="col-md-6">
+															<div class="form-group label-floating">
+																	<label class="control-label">Tutor</label>
+																	<input type="text" class="form-control-text" id="strtutor" name="strtutor">
+															</div>
+													</div>
+													<div class="col-md-6">
+															<div class="form-group label-floating">
+																	<label class="control-label">Teléfono de tutor</label>
+																	<input type="tel" class="form-control-text data-numeric" maxlength="10" id="strteltutor" name="strteltutor">
+															</div>
+													</div>
+												</div>
+                        <input type="button" id="updtInfop" class="btn btn-primary pull-right" value="Actualiza mi usuario" />
+                        <div class="clearfix"></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer id="footer">
+				<div id="bottom-footer" class="section">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<span class="copyright">
+									Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<button title="Back to top" class="scroll">
+        <span class="arrow-up fas fa-angle-up"></span>
+    	</button>
+		</div>
+		<script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://stripe.github.io/jquery.payment/lib/jquery.payment.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+		<script src="assets/css/bootstrap4/popper.js"></script>
+		<script src="assets/css/bootstrap4/bootstrap.min.js"></script>
+		<script src="assets/scrollmagic/ScrollMagic.min.js"></script>
+    <script type="text/javascript" src="//connect.facebook.net/en_US/all.js#xfbml=1&appId=2099671733382944" id="facebook-jssdk"></script>
+		<script src="assets/js/funtions.js"></script>
+		<script type="text/javascript" src="assets/js/errores.js"></script>
+		<script type="text/javascript">
+			$("#updtInfop").click(function(){
+				var lstvalid = ["strnombre","strapellidom","strapellidop","strdireccion",
+				"strcorreo","strtelefono","strtutor","strteltutor","strcp"];
+				var valueText = errors({
+					valid: lstvalid,
+					normalstyle: { "border-bottom": "solid 1px #ddd" },
+					errors: false,
+					errorstyle: { "border-bottom": "solid 1px red" },
+					otherconf: { "confemail" : true }
+				});
+				console.log(valueText);
+				if(valueText){
+					clear(lstvalid.filter(function( item ){
+						return item != "strnombre";
+					}));
+				}
+			});
+		</script>
+	</body>
+</html>
