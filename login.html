@@ -12,114 +12,85 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/errores.css">
 	</head>
 	<body>
-		<div class="container-pz">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-login">
-            <div class="slider-container">
-              <div class="slider-turn">
-                <div class="item-pas form-group">
-                  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
-                  <div id="status"></div>
-                </div>
-                <div class="item-pas">
+		<div class="login-page">
+			<div class="container">
+				<form class="form-login" method="post" action="<%= request.getContextPath() %>/loginsesion">
+					<h2 class="form-login-heading">Bienvenido</h2>
+					<div class="login-img"><img src="assets/img/if_user_925901.png" alt=""></div>
+					<div class="login-wrap">
+						<br>
+						<fb:login-button class="btn btn-theme btn-block" scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+						<div id="status"></div>
+						<hr>
+						<div class="otras-opciones">
+							<div class="item-btn"><input onclick="location.href='./';" class="btn btn-info btn-block" type="button" value="Inicio"/></div>
+							<div class="item-btn"><input  data-toggle="modal" data-target='#registro' class="btn btn-info btn-block" type="button" value="Registrarse"/></div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal fade modal-danger" id="registro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title"></h4>
+					</div>
+					<div class="modal-body" role="main">
+						<table align="center" class="table">
+							<tr valign="baseline">
+
+								<td>
 									<form class="form">
-	                  <label for="correo"></label>
-	                  <input type="text" class="form-control" id="correo" placeholder="">
+										<div class="panel panel-default">
+											<div class="panel-body">
+												<div class="form-group fadeInDown" data-wow-delay="0.5s">
+													<input type="text" id="strnombre" style="display: inline;" class="form-control-text" name="strnombre" required />
+													<label class="form-label" for="strnombre"><span class="form-label-content">Nombre</span></label>
+												</div>
+												<div class="form-group fadeInDown" data-wow-delay="0.5s">
+													<input type="email" id="stremail"  style="display: inline;" class="form-control-text" name="stremail" required />
+													<label class="form-label" for="stremail"><span class="form-label-content">Correo</span></label>
+												</div>
+												<div class="form-group fadeInDown" data-wow-delay="0.5s">
+													<input type="tel" id="strtelefono" maxlength="10" pattern="/d*" style="display: inline;" class="form-control-text" name="strtelefono" required />
+													<label class="form-label" for="strtelefono"><span class="form-label-content">Teléfono</span></label>
+												</div>
+											</div>
+											<div style="text-align: right;">
+												<h5>Vincular con facebook</h5>
+												<fb:login-button scope="public_profile,email" onlogin="checkLoginStateReference();"></fb:login-button>
+												<div id="response"></div>
+											</div>
+										</div>
+										<div class="form-group">
+											<input type="button" id="register-al" style="display:none;" class="btn btn-primary align-right" value="Registrarse"/>
+										</div>
 									</form>
-                </div>
-              </div>
-            </div>
-            <div class="bottom">
-              <div class="step">
-                <span></span>
-                <ul>
-                  <li data-num="1"></li>
-                  <li data-num="2"></li>
-                </ul>
-              </div>
-              <input type="button" class="btn btn-info" value="Registrarte">
-            </div>
-          </div>
-        </div>
-      </div>
+									<div id="mensaje"></div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
 		</div>
 		<script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/jquery.backstretch.min.js"></script>
 		<script src="assets/css/bootstrap4/popper.js"></script>
 		<script src="assets/css/bootstrap4/bootstrap.min.js"></script>
 		<script src="assets/scrollmagic/ScrollMagic.min.js"></script>
+		<script type="text/javascript" src="assets/js/errores.js"></script>
+		<script src="assets/js/sesiones.js"></script>
     <script type="text/javascript">
 			$.backstretch([
 				"http://4.bp.blogspot.com/-SkCaQXul0TY/VKnedLcZosI/AAAAAAAAAK8/qy8GL9kxLII/w1200-h630-p-k-no-nu/orgullo%2Bpolit%C3%A9cnico.jpg",
 				"https://img00.deviantart.net/eda1/i/2015/110/b/6/wallpaper_ipn_blood_by_iloveipn-d6j1kbh.jpg",
 				"http://ro-kam.com/wp-content/uploads/2017/05/vlcsnap-2017-05-09-09h15m22s202.jpg"
 			], {duration: 3000, fade: 750});
-
-      $(document).ready(function () {
-        var nbP = $('.form-login .item-pas').length;
-        var w = parseInt($('.form-login .item-pas').css("width"));
-        var max = (nbP - 1) * w;
-        $("ul li[data-num='1']").addClass('active');
-        $('.step span').html('Opción 1');
-
-        $('.btn').on('click', function(){
-          var margL = parseInt($('.slider-turn').css('margin-left'));
-          var modulo = margL%w;
-          if (-margL < max && modulo == 0) {
-            margL -= w;
-            $('.slider-turn').animate({
-              'margin-left':margL
-            },300);
-            $('ul li.active').addClass('true').removeClass('active');
-            var x = -margL/w +1;
-            $('ul li[data-num="'+x+'"]').addClass('active');
-            $('.step span').html("Opción "+x);
-          }
-        });
-      });
-
-			function statusChangeCallback(response) {
-				console.log('statusChangeCallback');
-				console.log(response);
-				if (response.status === 'connected') {
-					testAPI();
-				} else {
-					document.getElementById('status').innerHTML = 'Favor de iniciar sesión';
-				}
-			}
-			function checkLoginState() {
-				FB.getLoginStatus(function(response) {
-					statusChangeCallback(response);
-				});
-			}
-
-			window.fbAsyncInit = function() {
-				FB.init({
-					appId      : '2099671733382944',
-					cookie     : true,
-					xfbml      : true,
-					version    : 'v2.8'
-				});
-
-				FB.getLoginStatus(function(response) {
-					statusChangeCallback(response);
-				});
-
-			};
-			(function(d, s, id) {
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) return;
-				js = d.createElement(s); js.id = id;
-				js.src = "https://connect.facebook.net/en_US/sdk.js";
-				fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-
-			function testAPI() {
-				FB.api('/me', function(response) {
-					window.location.href='./';
-				});
-			}
     </script>
 	</body>
 </html>

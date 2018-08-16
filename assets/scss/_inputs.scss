@@ -1,26 +1,8 @@
 .form-control-text {
 	display: block;
 	position: relative;
-	margin-top: 1em;
-	padding: 0.84em 0;
-	width: 100%;
-	box-sizing: border-box;
-	color: #444;
-	outline: 0;
-	border: none;
-
-	border-bottom: solid 1px #ddd;
-	-webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-	   -moz-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-	     -o-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-			transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-
-	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #2196f3 4%);
-	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #2196f3 4%);
-	background-position: -400px 0;
-	background-size: 400px 100%;
-	background-repeat: no-repeat;
-
+	@include transition(all, 0.3s, cubic-bezier(0.64, 0.09, 0.08, 1));
+	@extend %input-type-text;
 	&:required {
 		box-shadow: none;
 	}
@@ -28,11 +10,7 @@
 	&:focus {
 		background-position: 0 0;
 		color: #444;
-
-		-webkit-transition: transform 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-	   	   -moz-transition: transform 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-	     	 -o-transition: transform 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-				transition: transform 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+		@include transition(transform, 0.3s, cubic-bezier(0.64, 0.09, 0.08, 1));
 	}
 }
 .form-label {
@@ -48,18 +26,12 @@
 }
 .form-label-content {
 	position: absolute;
-
-		-webkit-transition: transform 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-	   -moz-transition: transform 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-	     -o-transition: transform 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-			transition: transform 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+	@include transition(transform, 0.3s, cubic-bezier(0.64, 0.09, 0.08, 1));
 }
 .form-control-text :focus ~ .form-label .form-label-content,
 .form--filled .form-label-content {
 	font-size: 1.4rem;
-	-webkit-transform: translate3d(0, -65%, 0);
-	   -moz-transform: translate3d(0, -65%, 0);
-			transform: translate3d(0, -65%, 0);
+	@include transform( translate3d(0, -65%, 0) );
 }
 .form-wrapper {
 	overflow: hidden;
@@ -146,9 +118,7 @@
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
-  -webkit-box-shadow: 0 15px 24px rgba(37, 44, 65, 0.32);
-  -moz-box-shadow: 0 15px 24px rgba(37, 44, 65, 0.32);
-  box-shadow: 0 15px 24px rgba(37, 44, 65, 0.32);
+	@include box-shadow(0, 15px, 24px, rgba(37, 44, 65, 0.32), true );
 }
 
 .card-content {
@@ -207,32 +177,14 @@
 
 input[type='text'] {
   position: relative;
-  margin-top: 1em;
-  padding: 0.84em 0;
-  width: 100%;
-  box-sizing: border-box;
-  color: #444;
-  outline: 0;
-  border: none;
-  border-bottom: solid 1px #ddd;
-  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-  -moz-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-  -o-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #2196f3 4%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #2196f3 4%);
-  background-position: -400px 0;
-  background-size: 400px 100%;
-  background-repeat: no-repeat;
+	@include transition(all, 0.3s, cubic-bezier(0.64, 0.09, 0.08, 1));
+	@extend %input-type-text;
   &:required {
     box-shadow: none;
   }
   &:focus {
     background-position: 0 0;
     color: #444;
-    -webkit-transition: transform 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-    -moz-transition: transform 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-    -o-transition: transform 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-    transition: transform 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+		@include transition(transform, 0.3s, cubic-bezier(0.64, 0.09, 0.08, 1));
   }
 }

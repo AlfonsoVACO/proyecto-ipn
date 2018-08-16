@@ -5,9 +5,7 @@
 .order-details {
   position: relative;
   padding: 0px 30px 30px;
-  border-right: 1px solid #E4E7ED;
-  border-left: 1px solid #E4E7ED;
-  border-bottom: 1px solid #E4E7ED;
+  @include bordes(1px, solid, $bord-producto);
   &:before {
     content: "";
     position: absolute;
@@ -15,9 +13,7 @@
     right: -1px;
     top: -15px;
     height: 30px;
-    border-top: 1px solid #E4E7ED;
-    border-left: 1px solid #E4E7ED;
-    border-right: 1px solid #E4E7ED;
+    @include bordes(1px, solid, $bord-producto);
   }
 }
 

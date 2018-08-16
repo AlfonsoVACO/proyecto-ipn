@@ -116,9 +116,7 @@
                 top: 50%;
                 left: 0;
                 right: 0;
-                -webkit-transform: translateY(-50%);
-                -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
+                @include transform( translateY(-50%) );
                 height: 1px;
                 background-color: $bord-producto;
             }
@@ -131,9 +129,7 @@
         bottom: 1px;
         padding: 15px;
         text-align: center;
-        -webkit-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-        transform: translateY(0%);
+        @include transform(translateX(0%));
         -webkit-transition: 0.2s all;
         transition: 0.2s all;
         z-index: 9;
@@ -397,15 +393,11 @@
 
 #product-main-img {
     .slick-prev {
-        -webkit-transform: translateX(-15px);
-        -ms-transform: translateX(-15px);
-        transform: translateX(-15px);
+      @include transform(translateX(-15%));
         left: 15px;
     }
     .slick-next {
-        -webkit-transform: translateX(15px);
-        -ms-transform: translateX(15px);
-        transform: translateX(15px);
+        @include transform(translateX(15%));
         right: 15px;
     }
     .slick-prev, .slick-next {
@@ -416,9 +408,7 @@
     }
     &:hover {
         .slick-prev, .slick-next {
-            -webkit-transform: translateX(0%);
-            -ms-transform: translateX(0%);
-            transform: translateX(0%);
+            @include transform(translateX(0%));
             opacity: 1;
             visibility: visible;
         }
