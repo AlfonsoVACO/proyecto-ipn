@@ -104,4 +104,4 @@ $("#register-al").click(function(e){
     alumno_1.setRTelefono( $("#strtelefono").val() );
     console.log(alumno_1);
   }
-})
+});
