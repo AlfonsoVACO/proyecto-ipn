@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Curso</title>
+      <link href="css/font-face.css" rel="stylesheet" media="all">
+      <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+      <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+      <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+      <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+      <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+      <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+      <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+      <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+      <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+      <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+      <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+      <link href="css/theme.css" rel="stylesheet" media="all">
+  </head>
+  <body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <img src="images/icon/logo.png" alt="CoolAdmin" />
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li class="has-sub">
+                          <a href="index.html">
+                              <i class="fas fa-cogs"></i>Administradores</a>
+                        </li>
+                        <li>
+                            <a href="chart.html">
+                                <i class="fa fa-credit-card"></i>Pagos</a>
+                        </li>
+                        <li>
+                            <a href="table.html">
+                                <i class="fa fa-graduation-cap"></i>Estudiantes</a>
+                        </li>
+                        <li>
+                            <a href="form.html">
+                                <i class="fa fa-users"></i>Profesores</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-podcast"></i>Platica</a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="fa fa-laptop"></i>Cursos</a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="fa fa-cube"></i>Clases</a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="fa fa-calendar-check-o"></i>Asesorías</a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="far fa-file-alt"></i>Examen simulacro</a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="fas fa-user"></i>Bolsa de trabajo</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/icon/logo.png" alt="Cool Admin" />
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li class="active has-sub">
+                          <a href="index.html">
+                              <i class="fas fa-cogs"></i>Administradores</a>
+                        </li>
+                        <li>
+                            <a href="chart.html">
+                                <i class="fa fa-credit-card"></i>Pagos</a>
+                        </li>
+                        <li>
+                            <a href="table.html">
+                                <i class="fa fa-graduation-cap"></i>Estudiantes</a>
+                        </li>
+                        <li>
+                            <a href="form.html">
+                                <i class="fa fa-users"></i>Profesores</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-podcast"></i>Platica</a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="fa fa-laptop"></i>Cursos</a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="fa fa-cube"></i>Clases</a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="fa fa-calendar-check-o"></i>Asesorías</a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="far fa-file-alt"></i>Examen simulacro</a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="fas fa-user"></i>Bolsa de trabajo</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" action="" method="POST">
+                                <input class="au-input au-input--xl" type="text" name="search" />
+                                <button class="au-btn--submit" type="submit">
+                                    <i class="zmdi zmdi-search"></i>
+                                </button>
+                            </form>
+                            <div class="header-button">
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
+                                        <div class="image">
+                                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                        </div>
+                                        <div class="content">
+                                            <a class="js-acc-btn" href="#">john doe</a>
+                                        </div>
+                                        <div class="account-dropdown js-dropdown">
+                                            <div class="info clearfix">
+                                                <div class="image">
+                                                    <a href="#">
+                                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    <h5 class="name">
+                                                        <a href="#">john doe</a>
+                                                    </h5>
+                                                    <span class="email">johndoe@example.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__body">
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-account"></i>Mi cuenta</a>
+                                                </div>
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-settings"></i>Configuración</a>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__footer">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-power"></i>Cerrar sesión</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="overview-wrap">
+                                  <button class="au-btn au-btn-icon au-btn--blue" onclick="getItem(this);" href-to-view-back="false" href-to-view="administradores/index">
+                                    <i class="fas fa-chevron-left"></i></button>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row  m-t-30">
+                        <div class="col-md-12">
+                          <div class="card">
+          									<div class="card-header">
+          										<h4>{{ Nombre curso }}</h4>
+          									</div>
+          									<div class="card-body">
+          										<div class="default-tab">
+          											<nav>
+          												<div class="nav nav-tabs" id="nav-tab" role="tablist">
+          													<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home"
+          													 aria-selected="true">Información</a>
+          													<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile"
+          													 aria-selected="false">Grupo</a>
+          													<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact"
+          													 aria-selected="false">Materiales</a>
+          												</div>
+          											</nav>
+          											<div class="tab-content pl-3 pt-2" id="nav-tabContent">
+          												<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                        <div class="row">
+                                          <div class="col-md-6" style="padding: 10%;">
+                                            <!--<div class="card">
+                                              <div class="card-header">
+                                                  <strong class="card-title mb-3">Imagen</strong>
+                                              </div>
+                                              <div class="card-body">
+
+                                              </div>
+                                            </div>-->
+                                            <div class="mx-auto d-block">
+                                                <img class="rounded-circle mx-auto d-block" src="images/icon/avatar-01.jpg" alt="Card image cap">
+                                                <form>
+                                                  <div class="location text-sm-center  m-t-30">
+                                                    <div class="custom-file">
+                                                      <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+                                                      <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="location text-sm-center  m-t-30">
+                                                    <input type="button" class="btn btn-success" value="Cambiar imagen"/>
+                                                  </div>
+                                                </form>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-6">
+                                            <form>
+                                              <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="textarea-input" class=" form-control-label">Descripción</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="textarea-input" id="textarea-input" rows="5" class="form-control"></textarea>
+                                                </div>
+                                              </div>
+                                              <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="textarea-input" class=" form-control-label">Resumen</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="textarea-input" id="textarea-input" rows="5" class="form-control"></textarea>
+                                                </div>
+                                              </div>
+                                              <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                  <label for="textarea-input" class=" form-control-label">Costo</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                  <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                      <span class="input-group-text">$</span>
+                                                    </div>
+                                                    <input type="text" class="form-control">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="form-group">
+                                                <input type="button" class="btn btn-success" value="Guardar cambios"/>
+                                                <input type="button" class="btn btn-success" value="Eliminar"/>
+                                              </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+          												</div>
+          												<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+          												</div>
+          												<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                    <div class="row">
+                                      <div class="col-4">
+                                        <div class="list-group" id="list-tab" role="tablist">
+                                          <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Tema I</a>
+                                          <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Tema II</a>
+                                          <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Tema III</a>
+                                          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Tema IV</a>
+                                        </div>
+                                      </div>
+                                      <div class="col-8">
+                                        <div class="tab-content" id="nav-tabContent">
+                                          <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <select name="multiple-select" id="multiple-select" multiple="" class="form-control">
+                                                        <option value="1">Recurso #1</option>
+                                                        <option value="2">Recurso #2</option>
+                                                        <option value="3">Recurso #3</option>
+                                                        <option value="4">Recurso #4</option>
+                                                        <option value="5">Recurso #5</option>
+                                                        <option value="6">Recurso #6</option>
+                                                        <option value="7">Recurso #7</option>
+                                                        <option value="8">Recurso #8</option>
+                                                        <option value="9">Recurso #9</option>
+                                                        <option value="10">Recurso #10</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <form action="" method="POST">
+                                              <div class="row">
+                                                <div class="col-md-6">
+                                                  <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                      <button class="btn btn-outline-secondary" type="button" id="button-addon1">Buscar</button>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                                  </div>
+                                                </div>
+                                                <div class="col-md-6 text-right">
+                                                  <input class="btn btn-success" type="button" value="Agregar"/>
+                                                </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                          <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
+                                          <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
+                                          <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+                                        </div>
+                                      </div>
+                                    </div>
+          												</div>
+          											</div>
+
+          										</div>
+          									</div>
+          								</div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+    <script src="js/transitions.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->
