@@ -261,6 +261,14 @@
                               </div>
                           </div>
                       </div>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="fb-send-to-messenger"
+                                messenger_app_id="2099671733382944"
+                                page_id="196856110912106" >
+                            </div>
+                        </div>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -291,7 +299,39 @@
     <!-- Main JS-->
     <script src="js/main.js"></script>
     <script src="js/transitions.js"></script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '2099671733382944',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v3.1'
+        });
+        FB.api('/'+friendID+'/feed', 'post', {
+           method: 'feed',
+           message: messageText,
+           name: 'write a title here',
+           caption: 'Put a caption here.',
+           description: 'Put your description here.',
+           link: 'http://stackoverflow.com/questions/2943297/how-send-message-facebook-friend-through-graph-api-using-accessstoken',
+           picture: 'link to the preview thumbnail',
+         }, function(response) {
+           if (!response || response.error) {
+             //alert('Error occured');
+           } else {
+             //alert('Post ID: ' + response.id);
+           }
+         }); 
+      };
 
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
 </body>
 
 </html>
