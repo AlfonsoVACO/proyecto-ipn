@@ -49,7 +49,7 @@ var checkLoginStateReference = function () {
             console.log(alumno_1);
         }
         else {
-            $("#register-al").show("fast");
+            $("#register-al").hide("fast");
         }
     });
 };

@@ -1,6 +1,7 @@
-define(["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+"use strict";
+exports.__esModule = true;
+var curso;
+(function (curso) {
     var Alumno = /** @class */ (function () {
         function Alumno() {
         }
@@ -40,7 +41,7 @@ define(["require", "exports"], function (require, exports) {
         Alumno.prototype.setPagoList = function (pagoList) { this.pagoList = pagoList; };
         return Alumno;
     }());
-    exports.default = Alumno;
+    curso.Alumno = Alumno;
     var Cursoclase = /** @class */ (function () {
         function Cursoclase() {
         }
@@ -88,6 +89,7 @@ define(["require", "exports"], function (require, exports) {
         };
         return Cursoclase;
     }());
+    curso.Cursoclase = Cursoclase;
     var Grupo = /** @class */ (function () {
         function Grupo() {
         }
@@ -117,6 +119,7 @@ define(["require", "exports"], function (require, exports) {
         };
         return Grupo;
     }());
+    curso.Grupo = Grupo;
     var Grupocompuesto = /** @class */ (function () {
         function Grupocompuesto() {
         }
@@ -158,6 +161,7 @@ define(["require", "exports"], function (require, exports) {
         };
         return Grupocompuesto;
     }());
+    curso.Grupocompuesto = Grupocompuesto;
     var Horario = /** @class */ (function () {
         function Horario() {
         }
@@ -181,6 +185,7 @@ define(["require", "exports"], function (require, exports) {
         };
         return Horario;
     }());
+    curso.Horario = Horario;
     var Listaasistencia = /** @class */ (function () {
         function Listaasistencia() {
         }
@@ -216,6 +221,7 @@ define(["require", "exports"], function (require, exports) {
         };
         return Listaasistencia;
     }());
+    curso.Listaasistencia = Listaasistencia;
     var Pago = /** @class */ (function () {
         function Pago() {
         }
@@ -269,4 +275,5 @@ define(["require", "exports"], function (require, exports) {
         };
         return Pago;
     }());
-});
+    curso.Pago = Pago;
+})(curso = exports.curso || (exports.curso = {}));

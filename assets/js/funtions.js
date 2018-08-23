@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	"use strict";
+	
 	var hamb = $('.hamburger');
 	var header = $('.header');
 	var hambActive = false;

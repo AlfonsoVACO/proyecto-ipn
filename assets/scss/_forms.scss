@@ -1,16 +1,3 @@
-@mixin mdb-label-color-toggle-focus(){
-  .form-group.is-focused & {
-    color: $mdb-label-color;
-    &:hover,
-    &:focus {
-      color: $mdb-label-color-toggle-focus;
-    }
-    fieldset[disabled] & {
-      color: $mdb-label-color;
-    }
-  }
-}
-
 .form-horizontal {
   .radio, .checkbox, .radio-inline,.checkbox-inline {
     padding-top: 0;

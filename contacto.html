@@ -107,23 +107,44 @@
 		<script src="assets/js/funtions.js"></script>
 		<script type="text/javascript" src="assets/js/errores.js"></script>
     <script type="text/javascript">
-      $("#btnpagar").click(function(){
-        var result = errors({
-          valid : ["strNoTarjeta","strNombreTarj","stdate"],
-          normalstyle: { "border-bottom": "solid 1px #ddd"},
-          errors : true,
-          errorstyle : { "border-bottom": "solid 1px red" },
-          otherconf : { "confemail": false }
-        });
-        clear(["strNoTarjeta","strNombreTarj"]);
-        console.log( result );
-      });
-      $("#item").click(function(){
-        $("#release").css({
-          "background-color": "rbga(0,0,0,0.6)",
-          "background-color": "rbga(255,255,255,0.95)"
-        });
-      });
+		/*(function (d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id))
+						return;
+				js = d.createElement(s);
+				js.id = id;
+				js.src = "https://connect.facebook.net/en_US/sdk.js?access_token=EAAd1oZBvQLyABAA8iT8ztfWgHxk9Qggk7aKwkJ5kDJ79dwz501ZC8JEDtvAg8fMAnAGAYOwZAbmTVOOabHzbhhYSWNRdPzhYxebgr8iWg2sQCvdB8q4cKbatTFZAbQxr7XdxAnZAMuZB89vBH2JtmC78kyibTEbQhFH3jyD6NzY48ezl003PzgJqvh1y9uy81vT3XuxVj5LgZDZD";
+				fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+
+		window.fbAsyncInit = function () {
+				FB.init({
+						appId: '2099671733382944',
+						cookie: true,
+						xfbml: true,
+						version: 'v2.8'
+				});
+				FB.getLoginStatus(function (response) {
+					console.log(response);
+					if (response.status === 'connected') {
+							FB.api('/me', function (dataresponse) {
+									console.log(dataresponse);
+							});
+					}
+				});
+
+				FB.api('/113124472034820?access_token=EAAd1oZBvQLyABADZAYucqZB4f12xfRdQmei4MoYcqd3xNtwcZBryd6taBQG5aIwPy5lWQjZCvEnacUWRryeavd9aS6xv4uszuO46CL5ZBnOUmFY6kB5arF4xhOi42ujQcHJKD1Lj2j76fs6Pc0qv1TBuHdWEiARfyDgmeqiKTe9FgNZBVp54xRkFyze5NGIeHYZCSX5Dw5XmGAZDZD', function(response) {
+				  console.log(response);
+				});
+				var body = 'Reading JS SDK documentation';
+				FB.api('/2231443443536976/feed', 'post', { message: body }, function(response) {
+				  if (!response || response.error) {
+				    alert('Error occured');
+				  } else {
+				    alert('Post ID: ' + response.id);
+				  }
+				});
+		};*/
     </script>
 	</body>
 </html>

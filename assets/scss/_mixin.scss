@@ -47,3 +47,15 @@
 	}
   box-shadow: $pix1 $pix2 $pix3 $pix4 $color;
 }
+@mixin mdb-label-color-toggle-focus(){
+  .form-group.is-focused & {
+    color: $mdb-label-color;
+    &:hover,
+    &:focus {
+      color: $mdb-label-color-toggle-focus;
+    }
+    fieldset[disabled] & {
+      color: $mdb-label-color;
+    }
+  }
+}

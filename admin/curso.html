@@ -3,7 +3,8 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>Curso</title>
+      <title>Curso {{ Nombre }}</title>
+
       <link href="css/font-face.css" rel="stylesheet" media="all">
       <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
       <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
@@ -23,186 +24,195 @@
   </head>
   <body class="animsition">
     <div class="page-wrapper">
-        <!-- HEADER MOBILE-->
-        <header class="header-mobile d-block d-lg-none">
-            <div class="header-mobile__bar">
-                <div class="container-fluid">
-                    <div class="header-mobile-inner">
-                        <a class="logo" href="index.html">
-                            <img src="images/icon/logo.png" alt="CoolAdmin" />
-                        </a>
-                        <button class="hamburger hamburger--slider" type="button">
-                            <span class="hamburger-box">
-                                <span class="hamburger-inner"></span>
-                            </span>
-                        </button>
-                    </div>
-                </div>
+      <header class="header-mobile d-block d-lg-none">
+        <div class="header-mobile__bar">
+          <div class="container-fluid">
+            <div class="header-mobile-inner">
+              <a class="logo" href="index.html">
+                <img src="images/icon/logo.png" alt="CoolAdmin" />
+              </a>
+              <button class="hamburger hamburger--slider" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
             </div>
-            <nav class="navbar-mobile">
-                <div class="container-fluid">
-                    <ul class="navbar-mobile__list list-unstyled">
-                        <li class="has-sub">
-                          <a href="index.html">
-                              <i class="fas fa-cogs"></i>Administradores</a>
-                        </li>
-                        <li>
-                            <a href="chart.html">
-                                <i class="fa fa-credit-card"></i>Pagos</a>
-                        </li>
-                        <li>
-                            <a href="table.html">
-                                <i class="fa fa-graduation-cap"></i>Estudiantes</a>
-                        </li>
-                        <li>
-                            <a href="form.html">
-                                <i class="fa fa-users"></i>Profesores</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-podcast"></i>Platica</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="fa fa-laptop"></i>Cursos</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="fa fa-cube"></i>Clases</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="fa fa-calendar-check-o"></i>Asesorías</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="far fa-file-alt"></i>Examen simulacro</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="fas fa-user"></i>Bolsa de trabajo</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <!-- END HEADER MOBILE-->
-
-        <!-- MENU SIDEBAR-->
-        <aside class="menu-sidebar d-none d-lg-block">
-            <div class="logo">
-                <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
+          </div>
+        </div>
+        <nav class="navbar-mobile">
+          <div class="container-fluid">
+            <ul class="navbar-mobile__list list-unstyled">
+              <li class="has-sub">
+                <a href="index.html">
+                  <i class="fas fa-cogs"></i>Administradores
                 </a>
-            </div>
-            <div class="menu-sidebar__content js-scrollbar1">
-                <nav class="navbar-sidebar">
-                    <ul class="list-unstyled navbar__list">
-                        <li class="active has-sub">
-                          <a href="index.html">
-                              <i class="fas fa-cogs"></i>Administradores</a>
-                        </li>
-                        <li>
-                            <a href="chart.html">
-                                <i class="fa fa-credit-card"></i>Pagos</a>
-                        </li>
-                        <li>
-                            <a href="table.html">
-                                <i class="fa fa-graduation-cap"></i>Estudiantes</a>
-                        </li>
-                        <li>
-                            <a href="form.html">
-                                <i class="fa fa-users"></i>Profesores</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-podcast"></i>Platica</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="fa fa-laptop"></i>Cursos</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="fa fa-cube"></i>Clases</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="fa fa-calendar-check-o"></i>Asesorías</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="far fa-file-alt"></i>Examen simulacro</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="fas fa-user"></i>Bolsa de trabajo</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </aside>
-        <!-- END MENU SIDEBAR-->
+              </li>
+              <li>
+                <a href="pagos.html">
+                  <i class="fa fa-credit-card"></i>Pagos
+                </a>
+              </li>
+              <li>
+                <a href="estudiantes.html">
+                  <i class="fa fa-graduation-cap"></i>Estudiantes
+                </a>
+              </li>
+              <li>
+                <a href="profesores.html">
+                  <i class="fa fa-users"></i>Profesores
+                </a>
+              </li>
+              <li>
+                <a href="platica.html">
+                  <i class="fa fa-podcast"></i>Platica
+                </a>
+              </li>
+              <li>
+                <a href="cursos.html">
+                  <i class="fa fa-laptop"></i>Cursos
+                </a>
+              </li>
+              <li>
+                <a href="clases.html">
+                  <i class="fa fa-cube"></i>Clases
+                </a>
+              </li>
+              <li>
+                <a href="asesorias.html">
+                  <i class="fa fa-calendar-check-o"></i>Asesorías
+                </a>
+              </li>
+              <li>
+                <a href="examenes.html">
+                  <i class="far fa-file-alt"></i>Examen simulacro
+                </a>
+              </li>
+              <li>
+                <a href="bolsa.html">
+                  <i class="fas fa-user"></i>Bolsa de trabajo
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <aside class="menu-sidebar d-none d-lg-block">
+        <div class="logo">
+          <a href="#">
+            <img src="images/icon/logo.png" alt="Cool Admin" />
+          </a>
+        </div>
+        <div class="menu-sidebar__content js-scrollbar1">
+          <nav class="navbar-sidebar">
+            <ul class="list-unstyled navbar__list change-menu">
+              <li class="active has-sub">
+                <a href="index.html">
+                  <i class="fas fa-cogs"></i>Administradores
+                </a>
+              </li>
+              <li>
+                <a href="pagos.html">
+                  <i class="fa fa-credit-card"></i>Pagos
+                </a>
+              </li>
+              <li>
+                <a href="estudiantes.html">
+                  <i class="fa fa-graduation-cap"></i>Estudiantes
+                </a>
+              </li>
+              <li>
+                <a href="profesores.html">
+                  <i class="fa fa-users"></i>Profesores
+                </a>
+              </li>
+              <li>
+                <a href="platica.html">
+                  <i class="fa fa-podcast"></i>Platica
+                </a>
+              </li>
+              <li>
+                <a href="cursos.html">
+                  <i class="fa fa-laptop"></i>Cursos
+                </a>
+              </li>
+              <li>
+                <a href="clases.html">
+                  <i class="fa fa-cube"></i>Clases
+                </a>
+              </li>
+              <li>
+                <a href="asesorias.html">
+                  <i class="fa fa-calendar-check-o"></i>Asesorías
+                </a>
+              </li>
+              <li>
+                <a href="examenes.html">
+                  <i class="far fa-file-alt"></i>Examen simulacro
+                </a>
+              </li>
+              <li>
+                <a href="bolsa.html">
+                  <i class="fas fa-user"></i>Bolsa de trabajo
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
 
-        <!-- PAGE CONTAINER-->
-        <div class="page-container">
-            <!-- HEADER DESKTOP-->
-            <header class="header-desktop">
-                <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <div class="header-wrap">
-                            <form class="form-header" action="" method="POST">
-                                <input class="au-input au-input--xl" type="text" name="search" />
-                                <button class="au-btn--submit" type="submit">
-                                    <i class="zmdi zmdi-search"></i>
-                                </button>
-                            </form>
-                            <div class="header-button">
-                                <div class="account-wrap">
-                                    <div class="account-item clearfix js-item-menu">
-                                        <div class="image">
-                                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
-                                        </div>
-                                        <div class="content">
-                                            <a class="js-acc-btn" href="#">john doe</a>
-                                        </div>
-                                        <div class="account-dropdown js-dropdown">
-                                            <div class="info clearfix">
-                                                <div class="image">
-                                                    <a href="#">
-                                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
-                                                    </a>
-                                                </div>
-                                                <div class="content">
-                                                    <h5 class="name">
-                                                        <a href="#">john doe</a>
-                                                    </h5>
-                                                    <span class="email">johndoe@example.com</span>
-                                                </div>
-                                            </div>
-                                            <div class="account-dropdown__body">
-                                                <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-account"></i>Mi cuenta</a>
-                                                </div>
-                                                <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-settings"></i>Configuración</a>
-                                                </div>
-                                            </div>
-                                            <div class="account-dropdown__footer">
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-power"></i>Cerrar sesión</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+      <div class="page-container">
+        <header class="header-desktop">
+          <div class="section__content section__content--p30">
+            <div class="container-fluid">
+              <div class="header-wrap">
+                <div class="header-button">
+                  <div class="account-wrap">
+                    <div class="account-item clearfix js-item-menu">
+                      <div class="image">
+                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                      </div>
+                      <div class="content">
+                        <a class="js-acc-btn" href="#">{{ Nombre admin }}</a>
+                      </div>
+                      <div class="account-dropdown js-dropdown">
+                        <div class="info clearfix">
+                          <div class="image">
+                            <a href="#">
+                              <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                            </a>
+                          </div>
+                          <div class="content">
+                            <h5 class="name">
+                              <a href="#">{{ Nombre admin }}</a>
+                            </h5>
+                            <span class="email">{{ correo@example.com }}</span>
+                          </div>
                         </div>
+                        <div class="account-dropdown__body">
+                          <div class="account-dropdown__item">
+                            <a href="perfil.html">
+                              <i class="zmdi zmdi-account"></i>Mi cuenta
+                            </a>
+                          </div>
+                          <div class="account-dropdown__item">
+                            <a href="config.html">
+                              <i class="zmdi zmdi-settings"></i>Configuración
+                            </a>
+                          </div>
+                        </div>
+                        <div class="account-dropdown__footer">
+                          <a href="#">
+                            <i class="zmdi zmdi-power"></i>Cerrar sesión
+                          </a>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </header>
-            <!-- HEADER DESKTOP-->
+              </div>
+            </div>
+          </div>
+        </header>
 
             <!-- MAIN CONTENT-->
             <div class="main-content">
@@ -240,20 +250,12 @@
                                       <div class="col-md-12">
                                         <div class="row">
                                           <div class="col-md-6" style="padding: 10%;">
-                                            <!--<div class="card">
-                                              <div class="card-header">
-                                                  <strong class="card-title mb-3">Imagen</strong>
-                                              </div>
-                                              <div class="card-body">
-
-                                              </div>
-                                            </div>-->
                                             <div class="mx-auto d-block">
-                                                <img class="rounded-circle mx-auto d-block" src="images/icon/avatar-01.jpg" alt="Card image cap">
-                                                <form>
+                                                <div id="imagePreview"></div>
+                                                <form enctype="multipart/form-data">
                                                   <div class="location text-sm-center  m-t-30">
                                                     <div class="custom-file">
-                                                      <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+                                                      <input type="file" class="custom-file-input" id="customFileLang" lang="es" accept=".png,.jpeg,.jpg,.gif" preview>
                                                       <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
                                                     </div>
                                                   </div>
@@ -290,7 +292,7 @@
                                                     <div class="input-group-prepend">
                                                       <span class="input-group-text">$</span>
                                                     </div>
-                                                    <input type="text" class="form-control">
+                                                    <input type="text" class="form-control" pattern="[0-9]">
                                                   </div>
                                                 </div>
                                               </div>
@@ -372,32 +374,41 @@
         </div>
 
     </div>
-
     <script src="vendor/jquery-3.2.1.min.js"></script>
-    <!-- Bootstrap JS-->
     <script src="vendor/bootstrap-4.1/popper.min.js"></script>
     <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
-    <!-- Vendor JS       -->
-    <script src="vendor/slick/slick.min.js">
-    </script>
+    <script src="vendor/slick/slick.min.js"></script>
     <script src="vendor/wow/wow.min.js"></script>
     <script src="vendor/animsition/animsition.min.js"></script>
-    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
-    </script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
-    <script src="vendor/counter-up/jquery.counterup.min.js">
-    </script>
+    <script src="vendor/counter-up/jquery.counterup.min.js"></script>
     <script src="vendor/circle-progress/circle-progress.min.js"></script>
     <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
     <script src="vendor/chartjs/Chart.bundle.min.js"></script>
-    <script src="vendor/select2/select2.min.js">
-    </script>
-
-    <!-- Main JS-->
+    <script src="vendor/select2/select2.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/transitions.js"></script>
+    <script type="text/javascript">
 
-</body>
-
+    $("input[type='file']").on("change",function(){
+var filePath = $(this).val();
+  var lstExtensions = $(this).attr("accept").trim().split(",").filter(function(item){
+    return item == (filePath.substring(filePath.lastIndexOf("."))).toLowerCase();
+  });
+  if(lstExtensions.length == 0){
+      $(this).val("");
+      return false;
+  }else{
+      if ($(this)[0].files && $(this)[0].files[0] && $(this).attr("preview") != undefined) {
+          var reader = new FileReader();
+          reader.onload = function(e) {
+              document.getElementById('imagePreview').innerHTML = '<img class="rounded-circle mx-auto d-block" src="'+e.target.result+'">';
+          };
+          reader.readAsDataURL($(this)[0].files[0]);
+      }
+  }
+});
+    </script>
+  </body>
 </html>
-<!-- end document-->
